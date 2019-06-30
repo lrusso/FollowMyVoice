@@ -1092,25 +1092,40 @@ public class Main extends Activity implements TextToSpeech.OnInitListener
 				ArrayList<String> data = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 				for (int i=0;i<data.size();i++)
 					{
+					PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+					boolean isScreenOn = pm.isScreenOn();
+
 					if (data.get(i).toLowerCase().equals(getResources().getString(R.string.menuDown)))
 						{
-						GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_DOWN;
-						GlobalVars.lastActivityArduino.toString();
+						if (isScreenOn==true)
+							{
+							GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_DOWN;
+							GlobalVars.lastActivityArduino.toString();
+							}
 						}
 					else if (data.get(i).toLowerCase().equals(getResources().getString(R.string.menuUp)))
 						{
-						GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_UP;
-						GlobalVars.lastActivityArduino.toString();
+						if (isScreenOn==true)
+							{
+							GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_UP;
+							GlobalVars.lastActivityArduino.toString();
+							}
 						}
 					else if (data.get(i).toLowerCase().equals(getResources().getString(R.string.menuLeft)))
 						{
-						GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_LEFT;
-						GlobalVars.lastActivityArduino.toString();
+						if (isScreenOn==true)
+							{
+							GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_LEFT;
+							GlobalVars.lastActivityArduino.toString();
+							}
 						}
 					else if (data.get(i).toLowerCase().equals(getResources().getString(R.string.menuRight)))
 						{
-						GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_RIGHT;
-						GlobalVars.lastActivityArduino.toString();
+						if (isScreenOn==true)
+							{
+							GlobalVars.arduinoKeyPressed = GlobalVars.ARDUINO_RIGHT;
+							GlobalVars.lastActivityArduino.toString();
+							}
 						}
 					else if (data.get(i).toLowerCase().equals(getResources().getString(R.string.menuAnswer)))
 						{
