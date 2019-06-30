@@ -32,6 +32,9 @@ OpenSource launcher for the cuadriplegic people for using smartphones and tablet
 - Say "Answer Call" to answer the call
 - Say "Reject Call" to end the call
 
+## How to turn on the screen
+- Say "Screen On" to turn on the screen
+
 ## TO UNINSTALL
 - Go to Settings/System Settings/Applications/Follow My Voice/Uninstall
 
