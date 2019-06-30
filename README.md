@@ -39,7 +39,7 @@ OpenSource launcher for the cuadriplegic people for using smartphones and tablet
 - Go to Settings/System Settings/Applications/Follow My Voice/Uninstall
 
 ## IMPORTANT NOTE 1
-If you have a device with Android 5.0 (Lollipop), Android 6.0 (Marshmallow) or Android 7.0 (Nougat), you have to set the way you want to answer a call by going to Settings/Accessibility/Answering/ending calls. In Android 8.0 (Oreo) and higher you can answer a call by sliding up without inconveniences.
+If you have a device with Android 5.0 (Lollipop), Android 6.0 (Marshmallow) or Android 7.0 (Nougat), you have to set the way you want to answer a call by going to Settings/Accessibility/Answering/ending calls. In Android 8.0 (Oreo) and higher you can answer a call by saying "Answer Call" without inconveniences.
 
 ## IMPORTANT NOTE 2
 If you have a device with Android 4.4 (KitKat) or higher, you must set Follow My Voice as your App for messages. To do so, you must go to Settings/Default applications/Messages and then select Follow My Voice from the list.
