@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.app.*;
 import android.os.*;
+import android.view.Window;
 import android.widget.*;
 
 public class Calls extends Activity
@@ -14,6 +15,7 @@ public class Calls extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.calls);
 		GlobalVars.lastActivity = Calls.class;
 		GlobalVars.lastActivityArduino = this;
@@ -23,9 +25,6 @@ public class Calls extends Activity
 		goback = (TextView) findViewById(R.id.goback);
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=4;
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
         }
     
 	@Override public void onResume()
@@ -49,9 +48,6 @@ public class Calls extends Activity
 			{
 			GlobalVars.talk(getResources().getString(R.string.layoutCallsOnResume));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

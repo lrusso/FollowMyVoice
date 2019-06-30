@@ -6,6 +6,7 @@ import android.media.*;
 import android.net.*;
 import android.net.wifi.*;
 import android.os.*;
+import android.view.Window;
 import android.widget.*;
 
 public class SettingsApp extends Activity
@@ -28,6 +29,7 @@ public class SettingsApp extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.settings);
 		GlobalVars.lastActivity = SettingsApp.class;
 		GlobalVars.lastActivityArduino = this;
@@ -130,10 +132,6 @@ public class SettingsApp extends Activity
 			{
 			GlobalVars.setText(inputmode,false,getResources().getString(R.string.layoutSettingsInputMode) + getResources().getString(R.string.layoutSettingsInputModeVoice));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 		
 	@Override public void onResume()
@@ -158,10 +156,6 @@ public class SettingsApp extends Activity
 		GlobalVars.selectTextView(privacypolicy,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutSettingsOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

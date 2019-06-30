@@ -1652,27 +1652,4 @@ public class GlobalVars extends Application
     		}  
 		return true;  
 		}
-
-	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	public static void hideNavigationBar(Activity a)
-		{
-		try
-			{
-			if(Build.VERSION.SDK_INT > 11 && Build.VERSION.SDK_INT < 19)
-				{ // lower api
-				View v = a.getWindow().getDecorView();
-				v.setSystemUiVisibility(View.GONE);
-				}
-				else if(Build.VERSION.SDK_INT >= 19)
-				{
-				//for new api versions.
-				View decorView = a.getWindow().getDecorView();
-				int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-				decorView.setSystemUiVisibility(uiOptions);
-				}
-			}
-			catch(Exception e)
-			{
-			}
-		}
 	}

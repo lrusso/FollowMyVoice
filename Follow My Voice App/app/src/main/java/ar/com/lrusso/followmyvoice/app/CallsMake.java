@@ -1,6 +1,7 @@
 package ar.com.lrusso.followmyvoice.app;
 
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 
 import android.app.Activity;
@@ -15,6 +16,7 @@ public class CallsMake extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.callsmake);
 		GlobalVars.lastActivity = CallsMake.class;
 		GlobalVars.lastActivityArduino = this;
@@ -23,9 +25,6 @@ public class CallsMake extends Activity
 		goback = (TextView) findViewById(R.id.goback);
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=3;
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
         }
 		
 	@Override public void onResume()
@@ -46,9 +45,6 @@ public class CallsMake extends Activity
 		GlobalVars.selectTextView(makecall,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutCallsMakeCallOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

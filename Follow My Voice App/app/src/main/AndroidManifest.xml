@@ -53,7 +53,7 @@
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Main"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.Holo.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -67,217 +67,217 @@
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.BookmarksList"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.BookmarksDelete"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Browser"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.BrowserPageViewer"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Applications"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Alarms"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.AlarmsList"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.AlarmsCreate"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.AlarmsDelete"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.AlarmsDeleteAll"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.AlarmsNotifier"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.SettingsApp"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MusicPlayer"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MusicPlayerArtists"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Messages"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MessagesInbox"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MessagesInboxDeleteAll"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MessagesSent"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MessagesSentDeleteAll"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MessagesCompose"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.MessagesDelete"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Calls"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.CallsMake"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.CallsLogs"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.CallsLogsDelete"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.Contacts"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.ContactsCreate"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.ContactsDelete"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.ContactsList"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.InputKeyboard"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <activity
             android:launchMode="singleTask"
             android:label="@string/title_activity_main"
             android:name="ar.com.lrusso.followmyvoice.app.InputVoice"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <service android:enabled="true" android:name="ar.com.lrusso.followmyvoice.app.FollowMyVoiceService"/>
 

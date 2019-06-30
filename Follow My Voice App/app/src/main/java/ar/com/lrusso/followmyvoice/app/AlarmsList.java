@@ -1,6 +1,7 @@
 package ar.com.lrusso.followmyvoice.app;
 
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 import android.app.Activity;
 
@@ -15,6 +16,7 @@ public class AlarmsList extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.alarmslist);
 		GlobalVars.lastActivity = AlarmsList.class;
 		GlobalVars.lastActivityArduino = this;
@@ -27,9 +29,6 @@ public class AlarmsList extends Activity
 		selectedAlarm = -1;
 		
 		GlobalVars.setText(alarmlist, false, getResources().getString(R.string.layoutAlarmsListList) + " (" + GlobalVars.alarmList.size() + ")");
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 		
 	@Override public void onResume()
@@ -62,9 +61,6 @@ public class AlarmsList extends Activity
 			{
 			GlobalVars.talk(getResources().getString(R.string.layoutAlarmsListOnResume));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 
 	@Override public String toString()

@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 import android.app.Activity;
 import android.database.Cursor;
@@ -14,6 +15,7 @@ public class MessagesInboxDeleteAll extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.messagesinboxdeleteall);
 		GlobalVars.lastActivity = MessagesInboxDeleteAll.class;
 		GlobalVars.lastActivityArduino = this;
@@ -22,10 +24,6 @@ public class MessagesInboxDeleteAll extends Activity
 		GlobalVars.messagesInboxWereDeleted = false;
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=2;
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 		
 	@Override public void onResume()
@@ -40,10 +38,6 @@ public class MessagesInboxDeleteAll extends Activity
 		GlobalVars.selectTextView(delete,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutMessagesInboxDeleteAllOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

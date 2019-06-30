@@ -6,6 +6,7 @@ import android.net.*;
 import android.os.*;
 import android.speech.tts.*;
 import android.speech.tts.TextToSpeech.*;
+import android.view.Window;
 import android.widget.*;
 
 import java.util.*;
@@ -20,6 +21,7 @@ public class AlarmsNotifier extends Activity implements OnInitListener
 	@Override protected void onCreate(Bundle savedInstanceState)
 		{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.alarmsnotifier);
 		GlobalVars.lastActivity = AlarmsNotifier.class;
 		GlobalVars.lastActivityArduino = this;
@@ -79,10 +81,6 @@ public class AlarmsNotifier extends Activity implements OnInitListener
 		GlobalVars.startTTS(tts);
 		tts = new TextToSpeech(this,this);
 		tts.setPitch((float) 1.0);
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

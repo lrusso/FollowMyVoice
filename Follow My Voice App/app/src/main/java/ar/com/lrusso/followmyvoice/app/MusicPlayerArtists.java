@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.app.*;
 import android.os.*;
+import android.view.Window;
 import android.widget.*;
 
 public class MusicPlayerArtists extends Activity
@@ -17,6 +18,7 @@ public class MusicPlayerArtists extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+    	requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.musicplayerartist);
 		GlobalVars.lastActivity = MusicPlayerArtists.class;
 		GlobalVars.lastActivityArduino = this;
@@ -28,10 +30,6 @@ public class MusicPlayerArtists extends Activity
 		GlobalVars.activityItemLimit=4;
 		selectedArtist = -1;
 		selectedAlbum = -1;
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 
 	@Override public void onResume()
@@ -48,10 +46,6 @@ public class MusicPlayerArtists extends Activity
 		GlobalVars.selectTextView(play,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutMusicPlayerArtistsOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 
 	@Override public String toString()

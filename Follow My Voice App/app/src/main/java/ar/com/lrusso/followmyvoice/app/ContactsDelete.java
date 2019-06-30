@@ -6,6 +6,7 @@ import android.database.*;
 import android.net.*;
 import android.os.*;
 import android.provider.*;
+import android.view.Window;
 import android.widget.*;
 
 import android.provider.ContactsContract.PhoneLookup;
@@ -19,6 +20,7 @@ public class ContactsDelete extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.contactsdelete);
 		GlobalVars.lastActivity = ContactsDelete.class;
 		GlobalVars.lastActivityArduino = this;
@@ -31,10 +33,6 @@ public class ContactsDelete extends Activity
 		nameValue = nameValue.replace("-","");
 		nameValue = nameValue.replace("  "," ");
 		GlobalVars.setText(name, false, nameValue);
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
     
 	@Override public void onResume()
@@ -50,10 +48,6 @@ public class ContactsDelete extends Activity
 		GlobalVars.selectTextView(delete,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutContactsDeleteOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

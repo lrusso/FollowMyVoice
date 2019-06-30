@@ -4,6 +4,7 @@ import android.app.*;
 import android.content.*;
 import android.media.*;
 import android.os.*;
+import android.view.Window;
 import android.widget.*;
 
 public class MusicPlayer extends Activity
@@ -22,6 +23,7 @@ public class MusicPlayer extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.musicplayer);
 		GlobalVars.lastActivity = MusicPlayer.class;
 		GlobalVars.lastActivityArduino = this;
@@ -43,10 +45,6 @@ public class MusicPlayer extends Activity
 			MusicPlayer.playstopicon.setImageResource(R.drawable.playerstop);
 			GlobalVars.setText(MusicPlayer.playstop,false, GlobalVars.context.getResources().getString(R.string.layoutMusicPlayerStop));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
     
 	@Override public void onResume()
@@ -67,10 +65,6 @@ public class MusicPlayer extends Activity
 		GlobalVars.selectTextView(artists,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutMusicPlayerOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

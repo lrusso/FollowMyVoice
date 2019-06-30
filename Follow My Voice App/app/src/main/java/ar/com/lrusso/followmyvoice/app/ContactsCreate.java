@@ -4,6 +4,7 @@ import android.app.*;
 import android.content.*;
 import android.os.*;
 import android.provider.*;
+import android.view.Window;
 import android.widget.*;
 
 import java.util.*;
@@ -23,6 +24,7 @@ public class ContactsCreate extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.contactscreate);
 		GlobalVars.lastActivity = ContactsCreate.class;
 		GlobalVars.lastActivityArduino = this;
@@ -36,10 +38,6 @@ public class ContactsCreate extends Activity
 			{
 			GlobalVars.setText(phonenumber, false, String.valueOf(phonenumberValue));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
     
 	@Override public void onResume()
@@ -70,10 +68,6 @@ public class ContactsCreate extends Activity
 		GlobalVars.selectTextView(create,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutContactsCreateOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

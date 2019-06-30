@@ -47,6 +47,7 @@ public class Main extends Activity implements TextToSpeech.OnInitListener
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.main);
     	activity = this;
 
@@ -97,9 +98,6 @@ public class Main extends Activity implements TextToSpeech.OnInitListener
 			catch(Exception e)
 			{
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 
 		//CHECKS IF MARSHMALLOW TO ASK THE USER FOR PERMISSIONS
 		if (Build.VERSION.SDK_INT>=23){try{marshmallowPermissions();}catch(Exception e){}}
@@ -369,9 +367,6 @@ public class Main extends Activity implements TextToSpeech.OnInitListener
 			{
 			testProfileChanger();
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 
 	@Override public void onDestroy()

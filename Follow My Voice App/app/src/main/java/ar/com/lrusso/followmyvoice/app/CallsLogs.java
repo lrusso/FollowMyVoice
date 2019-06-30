@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.os.Bundle;
 import android.provider.CallLog;
+import android.view.Window;
 import android.widget.TextView;
 
 import android.app.Activity;
@@ -19,6 +20,7 @@ public class CallsLogs extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.callslogs);
 		GlobalVars.lastActivity = CallsLogs.class;
 		GlobalVars.lastActivityArduino = this;
@@ -34,9 +36,6 @@ public class CallsLogs extends Activity
 		GlobalVars.callLogsReady = false;
 		GlobalVars.callLogsDataBase.clear();
 		new CallsLogsThread().execute();
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
     
 	@Override public void onResume()
@@ -61,9 +60,6 @@ public class CallsLogs extends Activity
 			{
 			GlobalVars.talk(getResources().getString(R.string.layoutCallsLogsOnResume));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

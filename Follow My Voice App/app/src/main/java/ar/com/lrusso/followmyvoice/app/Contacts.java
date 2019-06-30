@@ -15,6 +15,7 @@ public class Contacts extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.contacts);
 		GlobalVars.lastActivity = Contacts.class;
 		GlobalVars.lastActivityArduino = this;
@@ -23,9 +24,6 @@ public class Contacts extends Activity
 		goback = (TextView) findViewById(R.id.goback);
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=3;
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
     
 	@Override public void onResume()
@@ -48,9 +46,6 @@ public class Contacts extends Activity
 			{
 			GlobalVars.talk(getResources().getString(R.string.layoutContactsOnResume));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

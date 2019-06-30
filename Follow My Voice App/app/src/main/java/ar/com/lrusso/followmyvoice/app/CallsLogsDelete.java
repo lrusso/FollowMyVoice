@@ -3,6 +3,7 @@ package ar.com.lrusso.followmyvoice.app;
 import android.app.*;
 import android.os.*;
 import android.provider.*;
+import android.view.Window;
 import android.widget.*;
 
 public class CallsLogsDelete extends Activity
@@ -13,6 +14,7 @@ public class CallsLogsDelete extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.callslogsdelete);
 		GlobalVars.lastActivity = CallsLogsDelete.class;
 		GlobalVars.lastActivityArduino = this;
@@ -20,10 +22,6 @@ public class CallsLogsDelete extends Activity
 		goback = (TextView) findViewById(R.id.goback);
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=2;
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
         }
     
 	@Override public void onResume()
@@ -38,10 +36,6 @@ public class CallsLogsDelete extends Activity
 		GlobalVars.selectTextView(deletecalls,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutCallsLogsDeleteOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

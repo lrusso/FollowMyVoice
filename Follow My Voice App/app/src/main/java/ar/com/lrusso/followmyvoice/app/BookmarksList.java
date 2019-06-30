@@ -1,6 +1,7 @@
 package ar.com.lrusso.followmyvoice.app;
 
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 import android.app.Activity;
 
@@ -15,6 +16,7 @@ public class BookmarksList extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.bookmarkslist);
 		GlobalVars.lastActivity = BookmarksList.class;
 		GlobalVars.lastActivityArduino = this;
@@ -25,10 +27,6 @@ public class BookmarksList extends Activity
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=4;
 		selectedBookmark = -1;
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 	
 	@Override public void onResume()
@@ -55,10 +53,6 @@ public class BookmarksList extends Activity
 			{
 			GlobalVars.talk(getResources().getString(R.string.layoutBookmarksListOnResume));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.app.*;
 import android.os.*;
+import android.view.Window;
 import android.widget.*;
 
 public class BrowserPageViewer extends Activity
@@ -17,6 +18,7 @@ public class BrowserPageViewer extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.browserpageviewer);
 		GlobalVars.lastActivity = BrowserPageViewer.class;
 		GlobalVars.lastActivityArduino = this;
@@ -28,10 +30,6 @@ public class BrowserPageViewer extends Activity
 		goback = (TextView) findViewById(R.id.goback);
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=6;
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
     
 	@Override public void onResume()
@@ -50,10 +48,6 @@ public class BrowserPageViewer extends Activity
 		GlobalVars.selectTextView(addtobookmarks,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutBrowserPageViewerOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

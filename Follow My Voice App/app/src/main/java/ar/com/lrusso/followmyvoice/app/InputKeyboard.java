@@ -19,6 +19,7 @@ public class InputKeyboard extends Activity
 	@Override protected void onCreate(Bundle savedInstanceState)
 		{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.inputkeyboard);
 		GlobalVars.lastActivity = InputKeyboard.class;
 		GlobalVars.lastActivityArduino = this;
@@ -38,10 +39,6 @@ public class InputKeyboard extends Activity
 			limit = keyList.size() -1;
 			location = limit;
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 		
 	@Override public void onResume()
@@ -51,10 +48,6 @@ public class InputKeyboard extends Activity
             GlobalVars.alarmVibrator.cancel();}catch(NullPointerException e){}catch(Exception e){}
 		GlobalVars.lastActivity = InputKeyboard.class;
 		GlobalVars.talk(getResources().getString(R.string.layoutInputKeysOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

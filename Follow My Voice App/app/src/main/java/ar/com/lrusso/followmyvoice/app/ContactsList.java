@@ -23,6 +23,7 @@ public class ContactsList extends Activity
 	@Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.contactslist);
 		GlobalVars.lastActivity = ContactsList.class;
 		GlobalVars.lastActivityArduino = this;
@@ -35,10 +36,6 @@ public class ContactsList extends Activity
 		GlobalVars.activityItemLimit=5;
 		selectedContact = -1;
 		new ContactsListThread().execute("");
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 
     @Override protected void onResume()
@@ -77,10 +74,6 @@ public class ContactsList extends Activity
 				GlobalVars.talk(getResources().getString(R.string.layoutContactsListOnResume));
 				}
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 
 	@Override public String toString()

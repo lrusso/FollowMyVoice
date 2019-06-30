@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 
 import android.app.Activity;
@@ -19,6 +20,7 @@ public class MessagesDelete extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.messagesdelete);
 		GlobalVars.lastActivity = MessagesDelete.class;
 		GlobalVars.lastActivityArduino = this;
@@ -29,10 +31,6 @@ public class MessagesDelete extends Activity
 		GlobalVars.activityItemLimit=3;
 		GlobalVars.messagesWasDeleted = false;
 		GlobalVars.setText(todelete, false, messageFrom);
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 		
 	@Override public void onResume()
@@ -48,10 +46,6 @@ public class MessagesDelete extends Activity
 		GlobalVars.selectTextView(delete,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutMessagesDeleteOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

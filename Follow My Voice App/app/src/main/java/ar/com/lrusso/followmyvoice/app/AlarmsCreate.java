@@ -1,6 +1,7 @@
 package ar.com.lrusso.followmyvoice.app;
 
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 
 import android.app.Activity;
@@ -21,6 +22,7 @@ public class AlarmsCreate extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.alarmscreate);
 		GlobalVars.lastActivity = AlarmsCreate.class;
 		GlobalVars.lastActivityArduino = this;
@@ -35,10 +37,6 @@ public class AlarmsCreate extends Activity
 		GlobalVars.setText(day, false, getResources().getString(R.string.layoutAlarmsCreateDay) + GlobalVars.getDayName(dayValue));
 		GlobalVars.setText(hour, false, getResources().getString(R.string.layoutAlarmsCreateTimeHour) + GlobalVars.alarmTimeHoursValues.get(hourValue));
 		GlobalVars.setText(minute, false, getResources().getString(R.string.layoutAlarmsCreateTimeMinute) + GlobalVars.alarmTimeMinutesValues.get(minuteValue));
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
     
 	@Override public void onResume()
@@ -63,10 +61,6 @@ public class AlarmsCreate extends Activity
 		GlobalVars.selectTextView(create,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutAlarmsCreateOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (android.os.Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 
 	@Override public String toString()

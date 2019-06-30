@@ -5,6 +5,7 @@ import android.content.*;
 import android.net.*;
 import android.os.*;
 import android.telephony.*;
+import android.view.Window;
 import android.widget.*;
 
 import java.util.ArrayList;
@@ -25,9 +26,10 @@ public class MessagesCompose extends Activity
 	public static boolean contactListReady = false;
 	public static List<String> contactDataBase = new ArrayList<String>();
 
-		@Override protected void onCreate(Bundle savedInstanceState)
+	@Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.messagescompose);
 		GlobalVars.lastActivity = MessagesCompose.class;
 		GlobalVars.lastActivityArduino = this;
@@ -43,10 +45,6 @@ public class MessagesCompose extends Activity
 			GlobalVars.setText(addresse, false, messageToContactNameValue);
 			}
 		new MessagesComposeThread().execute("");
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 	
 	@Override public void onResume()
@@ -69,10 +67,6 @@ public class MessagesCompose extends Activity
 		GlobalVars.selectTextView(send,false);
 		GlobalVars.selectTextView(goback,false);
 		GlobalVars.talk(getResources().getString(R.string.layoutMessagesComposeOnResume));
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{
-            GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 	
 	@Override public String toString()

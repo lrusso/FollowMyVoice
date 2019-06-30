@@ -2,6 +2,7 @@ package ar.com.lrusso.followmyvoice.app;
 
 import android.app.*;
 import android.os.*;
+import android.view.Window;
 import android.widget.*;
 
 public class Messages extends Activity
@@ -14,6 +15,7 @@ public class Messages extends Activity
     @Override protected void onCreate(Bundle savedInstanceState)
     	{
     	super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
     	setContentView(R.layout.messages);
 		GlobalVars.lastActivity = Messages.class;
 		GlobalVars.lastActivityArduino = this;
@@ -24,9 +26,6 @@ public class Messages extends Activity
 		GlobalVars.activityItemLocation=0;
 		GlobalVars.activityItemLimit=4;
 		GlobalVars.setText(inbox, false, GlobalVars.context.getResources().getString(R.string.layoutMessagesInbox) + " (" + String.valueOf(GlobalVars.getMessagesUnreadCount()) + ")");
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
     	}
 
 	@Override public void onResume()
@@ -51,9 +50,6 @@ public class Messages extends Activity
 			{
 			GlobalVars.talk(getResources().getString(R.string.layoutMessagesOnResume));
 			}
-
-		//HIDES THE NAVIGATION BAR
-		if (Build.VERSION.SDK_INT>11){try{GlobalVars.hideNavigationBar(this);}catch(Exception e){}}
 		}
 
 	@Override public String toString()
