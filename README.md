@@ -4,10 +4,6 @@ OpenSource launcher for the cuadriplegic people for using smartphones and tablet
 
 ![alt screen](https://raw.githubusercontent.com/lrusso/FollowMyVoice/master/FollowMyVoice.png)
 
-## Video demo
-
-
-
 ## Download App
 
 - https://lrusso.github.io/FollowMyVoice/FollowMyVoice.apk
