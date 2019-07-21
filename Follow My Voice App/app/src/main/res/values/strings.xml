@@ -5,7 +5,7 @@
     <string name="title_activity_main">Follow My Voice</string>
     <string name="menu_settings">Settings</string>
 
-    <string name="mainWelcome">Welcome to Follow My Voice developed by Leonardo Javier Russo and designed for people with paraplegia. Please say menu and then up or down to browse between menus and then say menu and then right to select an option.</string>
+    <string name="mainWelcome">Welcome to Follow My Voice developed by Leonardo Javier Russo and designed for people with paraplegia. Please say menu and then up or down to browse between menus, and then say, menu and then right, to select an option.</string>
     <string name="mainMessages">Messages</string>
     <string name="mainMessagesNew">new messages</string>
     <string name="mainMessagesNoNew">Messages. No new messages.</string>
