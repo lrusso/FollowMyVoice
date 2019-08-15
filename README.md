@@ -6,7 +6,7 @@ OpenSource launcher for the quadriplegic people for using smartphones and tablet
 
 ## Video demo
 
-- https://www.youtube.com/watch?v=46ZqgnbNwe4
+- https://www.youtube.com/watch?v=mDbojARTmg8
 
 ## Download App
 
